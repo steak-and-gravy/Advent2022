@@ -8,27 +8,22 @@ namespace Advent2022
     {
         static void Main(string[] args)
         {
-            var lstElfCals = new List<int>();
-            var currentElf = 0;
-            // Read each line of the file into a string array. Each element
-                // of the array is one line of the file.
-            string[] lines = System.IO.File.ReadAllLines(@"input");
-            foreach (string line in lines)
-            {
-                if (line.Length > 0)
-                {
-                    currentElf += Int32.Parse(line);
-                }
-                else
-                {
-                    lstElfCals.Add(currentElf);
-                    currentElf = 0;
-                }
-            }
-            lstElfCals.Sort();
-            lstElfCals.Reverse();
+            var day1 = new Day1("input");
+            var mostCalories = day1.GetMostCalories();
+            Console.WriteLine("Most Calories: {0}", mostCalories);
+
+            var top3Calories = day1.GetCaloriesByIndex(0) +
+                day1.GetCaloriesByIndex(1) +
+                day1.GetCaloriesByIndex(2);
             
-            Console.WriteLine(lstElfCals[0]+lstElfCals[1]+lstElfCals[2]);
+            Console.WriteLine("Top 3 Calories: {0}", top3Calories);
+
+            var day2 = new Day2("input2.txt");
+            var score = day2.CalculateScore();
+            Console.WriteLine("Score: {0}", score);
+            
+            var realScore = day2.CalculateRealScore();
+            Console.WriteLine("Real Score: {0}", realScore);
         }
     }
 }
