@@ -24,6 +24,13 @@ namespace Advent2022
             
             var realScore = day2.CalculateRealScore();
             Console.WriteLine("Real Score: {0}", realScore);
+
+            var day3 = new Day3("input3.txt");
+            var priorities = day3.CalculatePriorities();
+            Console.WriteLine("Priorities: {0}", priorities);
+            var groupPriorities = day3.CalculateGroupPriorities();
+            Console.WriteLine("Group Priorities: {0}", groupPriorities);
+            
         }
     }
 }
