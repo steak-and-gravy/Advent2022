@@ -31,6 +31,11 @@ namespace Advent2022
             var groupPriorities = day3.CalculateGroupPriorities();
             Console.WriteLine("Group Priorities: {0}", groupPriorities);
             
+            var day4 = new Day4("input4.txt");
+            var assignmentDuplicate = day4.FindTotalDuplication();
+            Console.WriteLine("# of assignment duplicates: {0}", assignmentDuplicate);
+            var assignmentOverlaps = day4.FindPartialDuplication();
+            Console.WriteLine("# of assignment overlaps: {0}", assignmentOverlaps);
         }
     }
 }
