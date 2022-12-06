@@ -36,6 +36,25 @@ namespace Advent2022
             Console.WriteLine("# of assignment duplicates: {0}", assignmentDuplicate);
             var assignmentOverlaps = day4.FindPartialDuplication();
             Console.WriteLine("# of assignment overlaps: {0}", assignmentOverlaps);
+
+            var day5 = new Day5("input5a.txt", "input5b.txt");
+            day5.MoveCrates();
+            var topOfStacks = day5.TopOfEachStack();
+            Console.Write("Top of stacks: ");
+            foreach (var item in topOfStacks)
+            {
+                Console.Write(item);
+            }
+            Console.WriteLine();
+            day5 = new Day5("input5a.txt", "input5b.txt");
+            day5.MoveCratesV9001();
+            topOfStacks = day5.TopOfEachStack();
+            Console.Write("Top of stacks: ");
+            foreach (var item in topOfStacks)
+            {
+                Console.Write(item);
+            }
+            Console.WriteLine();
         }
     }
 }
