@@ -55,6 +55,12 @@ namespace Advent2022
                 Console.Write(item);
             }
             Console.WriteLine();
+
+            var day6 = new Day6("input6.txt");
+            var marker = day6.FindMarkerLocation();
+            Console.WriteLine("Marker: {0}", marker);
+            var messageLocation = day6.FindMessageLocation();
+            Console.WriteLine("Message Loc: {0}", messageLocation);
         }
     }
 }
