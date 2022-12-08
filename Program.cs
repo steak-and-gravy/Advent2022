@@ -61,6 +61,12 @@ namespace Advent2022
             Console.WriteLine("Marker: {0}", marker);
             var messageLocation = day6.FindMessageLocation();
             Console.WriteLine("Message Loc: {0}", messageLocation);
+
+            var day7 = new Day7("input7.txt");
+            var sumSize = day7.SizeOfDirectories(100000);
+            Console.WriteLine("Size: {0}", sumSize);
+            var sizeToDelete = day7.SizeOfDirectoryToDelete(30000000);
+            System.Console.WriteLine("Size to delete: {0}", sizeToDelete);
         }
     }
 }
